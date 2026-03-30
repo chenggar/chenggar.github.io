@@ -1,17 +1,21 @@
-/* CSS HEX
-tangerine-dream: #F7A078;
-soft-linen: #E8E5DA;
-light-blue: #94C1CE;
-rich-cerulean: #497597;
-charcoal-blue: #283F53;
-*/
+:root{
+    --color-primary: #497597;
+    --color-secondary: #94C1CE;
+    --color-dark: #283F53;
+    --color-accent: #F7A078;
+    --color-bg: #E8E5DA;
+    
+    --gradient-light: #E4E7E4;
+    --gradient-blue-1: #62A9BD;
+    --gradient-blue-2: #306573;
+}
 
 body{
     margin: 0;
     padding: 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: #94C1CE;
-    background-color: #E8E5DA;
+    color: var(--color-secondary);
+    background-color: var(--color-bg);
 }
 
 html{
@@ -39,7 +43,7 @@ html{
 
 /* Gradient Animation */
 .orange-gradient{
-    background: radial-gradient(circle, #E4E7E4 0%, #F7A078 100%);
+    background: radial-gradient(circle, var(--gradient-light) 0%, var(--color-accent) 100%);
     background-size: 200%;
     background-clip: text;
     -webkit-background-clip: text;
@@ -48,7 +52,7 @@ html{
 }
 
 .blue-gradient{
-    background: radial-gradient(circle, #62A9BD 0%, #306573 100%);
+    background: radial-gradient(circle, var(--gradient-blue-1) 0%, var(--gradient-blue-2) 100%);
     background-size: 200%;
     background-clip: text;
     -webkit-background-clip: text;
@@ -73,7 +77,7 @@ header{
 .left{
     display: flex;
     align-items: center;
-    color: #283F53;
+    color: var(--color-dark);
 }
 
 .left a{
@@ -95,7 +99,7 @@ header ul li{
 
 header ul a{
     text-decoration: none;
-    color: #497597;
+    color: var(--color-primary);
     font-weight: bold;
     margin: 0 10px;
 }
@@ -111,12 +115,12 @@ header ul a{
     justify-content: center;
     font-size: 30px;
     text-decoration: none;
-    color: #497597;
+    color: var(--color-primary);
     transition: 0.3s;
 }
 
 .box-icons a:hover{
-    color: #94C1CE;
+    color: var(--color-secondary);
 }
 
 /* Hero */
@@ -166,7 +170,7 @@ header ul a{
     line-height: 25px;
     margin-bottom: 30px;
     font-size: 20px;
-    color: #283F53;
+    color: var(--color-dark);
     font-weight: bold;
 }
 
@@ -175,12 +179,12 @@ header ul a{
 }
 
 .hero-info button{
-    color: #E8E5DA;
+    color: var(--color-bg);
     padding: 15px 35px;
     border-radius: 10px;
-    border: 1px solid #283F53;
-    background-color: #497597;
-    box-shadow: 0 0 5px #283F53;
+    border: 1px solid var(--color-dark);
+    background-color: var(--color-primary);
+    box-shadow: 0 0 5px var(--color-dark);
     cursor: pointer;
     transition: 0.3s;
     display: flex;
@@ -190,7 +194,7 @@ header ul a{
 }
 
 .hero-info button:hover{
-    box-shadow: 0 0 15px #283F53;
+    box-shadow: 0 0 15px var(--color-dark);
     opacity: 0.7;
 }
 
@@ -231,13 +235,13 @@ header ul a{
 .project-videobox video{
     object-fit: cover;
     width: 100%;
-    box-shadow: 0 0 10px #283F53;
+    box-shadow: 0 0 10px var(--color-dark);
     border-radius: 20px;
     transition: 0.5s;
 }
 
 .project-videobox video:hover{
-    box-shadow: 0 0 20px #283F53;
+    box-shadow: 0 0 20px var(--color-dark);
 }
 
 .project-info{
@@ -259,7 +263,7 @@ header ul a{
 }
 
 .project-info p{
-    color: #283F53;
+    color: var(--color-dark);
     width: 90%;
     font-size: 15px;
     max-width: 400px;
@@ -272,15 +276,15 @@ header ul a{
     color: white;
     padding: 10px 15px;
     border-radius: 10px;
-    border: 1px solid #283F53;
-    background-color: #497597;
-    box-shadow: 0 0 5px #283F53;
+    border: 1px solid var(--color-dark);
+    background-color: var(--color-primary);
+    box-shadow: 0 0 5px var(--color-dark);
     cursor: pointer;
     transition: 0.3s;
 }
 
 .project-info button:hover{
-    box-shadow: 0 0 15px #283F53;
+    box-shadow: 0 0 15px var(--color-dark);
     opacity: 0.7;
 }
 
@@ -307,11 +311,11 @@ header ul a{
 
 @keyframes hoverAnimation{
     0%{
-        box-shadow: 0 0 5px #283F53;
+        box-shadow: 0 0 5px var(--color-dark);
         transform: translate(100%, 50%) rotate(30deg);
     }
     100%{
-        box-shadow: 0 0 15px #283F53;
+        box-shadow: 0 0 15px var(--color-dark);
         transform: translateX(80%, 50%) rotate(0deg);
     }
 }
@@ -414,7 +418,7 @@ header ul a{
 
 .social-box a{
     display: flex;
-    color: #283F53;
+    color: var(--color-dark);
     text-decoration: none;
     font-size: 20px;
     text-wrap: nowrap;
@@ -424,7 +428,7 @@ header ul a{
 }
 
 .social-box a:hover{
-    box-shadow: 0 0 20px #497597;
+    box-shadow: 0 0 20px var(--color-primary);
     border-radius: 10px;  
 }
 
@@ -451,7 +455,7 @@ header ul a{
 footer h1{
     font-size: 16px;
     font-weight: normal;
-    color:#283F53;
+    color:var(--color-dark);
 }
 
 /* Menu */
@@ -459,7 +463,7 @@ footer h1{
     font-size: 25px;
     cursor: pointer;
     display: none;
-    color: #283F53;
+    color: var(--color-dark);
     transition: opacity 0.3s ease;
 }
 
@@ -475,17 +479,17 @@ footer h1{
     top: 0;
     bottom: 70px;
     width: 0%;
-    background-color: #497597;
+    background-color: var(--color-primary);
     backdrop-filter: blur(10px);
     z-index: 999;
-    box-shadow: 0 0 20px #283F53;
+    box-shadow: 0 0 20px var(--color-dark);
     border-bottom-left-radius: 100%;
     opacity: 0;
 }
 
 .close-icon{
     font-size: 25px;
-    color: #283F53;
+    color: var(--color-dark);
     padding-top: 10px;
     padding-left: 10px;
     cursor: pointer;
@@ -501,10 +505,10 @@ footer h1{
 }
 
 .sidebar ul li a{
-    color: #283F53;
+    color: var(--color-dark);
     font-size: 30px;
     font-weight: 700;
-    text-shadow: 0 0 15px #283F53;
+    text-shadow: 0 0 15px var(--color-dark);
     text-decoration: none;
 }
 
